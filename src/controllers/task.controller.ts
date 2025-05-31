@@ -13,7 +13,7 @@ export const create = async (req: Request, res: Response) => {
 
 export const update = async (req: Request, res: Response) => {
   let response = await TaskService.updateTask(req.params.id, req.body);
-  res.status(204).send();
+  res.status(200).send(response);
 };
 
 export const remove = async (req: Request, res: Response) => {
