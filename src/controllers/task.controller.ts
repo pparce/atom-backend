@@ -7,12 +7,12 @@ export const getAll = async (req: Request, res: Response) => {
 };
 
 export const create = async (req: Request, res: Response) => {
-  await TaskService.createTask(req.body);
-  res.status(201).send();
+  let response = await TaskService.createTask(req.body);
+  res.status(201).send(response);
 };
 
 export const update = async (req: Request, res: Response) => {
-  await TaskService.updateTask(req.params.id, req.body);
+  let response = await TaskService.updateTask(req.params.id, req.body);
   res.status(204).send();
 };
 

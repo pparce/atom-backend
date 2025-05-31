@@ -1,4 +1,3 @@
-import { User } from "./user.model";
 
 export interface Task {
   id?: string;
@@ -6,5 +5,5 @@ export interface Task {
   description: string;
   createdAt: string;
   completed: boolean;
-  user: User;
+  userId: string;
 }
