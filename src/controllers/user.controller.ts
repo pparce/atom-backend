@@ -12,7 +12,7 @@ export const login = async (req: Request, res: Response) => {
     let user = await UserService.findUserByEmail(email);
 
     if (!user) {
-        res.status(404).json({ error: 'Usuario no encontrado' });
+        res.status(401).json({ error: 'Usuario no encontrado' });
     }
 
     res.status(200).json({ message: 'Login exitoso', user });
