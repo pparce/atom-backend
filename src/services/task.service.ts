@@ -4,8 +4,12 @@ import { Task } from '../models/task.model';
 const collection = db.collection('tasks');
 
 export const getTasks = async (userId: string): Promise<Task[]> => {
-    const snapshot = await collection.where('userId', '==', userId).get();
-    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Task));
+  const snapshot = await collection
+    .where('userId', '==', userId)
+    .orderBy('createdAt', 'desc') // Ordena por fecha de creación, más reciente primero
+    .get();
+
+  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Task));
 };
 
 export const createTask = async (task: Task) => {
