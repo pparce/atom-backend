@@ -16,6 +16,11 @@ export const update = async (req: Request, res: Response) => {
   res.status(200).send(response);
 };
 
+export const partialUpdate = async (req: Request, res: Response) => {
+  let response = await TaskService.partialUpdateTask(req.params.id, req.body);
+  res.status(200).send(response);
+};
+
 export const remove = async (req: Request, res: Response) => {
   await TaskService.deleteTask(req.params.id);
   res.status(204).send();

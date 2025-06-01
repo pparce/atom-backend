@@ -14,6 +14,9 @@ router.post('/', validate(taskSchema), TaskController.create);
 // PUT actualizar una tarea existente
 router.put('/:id', validate(taskSchema), TaskController.update);
 
+// PATCH actualizar parcialmente una tarea existente
+router.patch('/:id', TaskController.partialUpdate);
+
 // DELETE eliminar una tarea existente
 router.delete('/:id', TaskController.remove);
 

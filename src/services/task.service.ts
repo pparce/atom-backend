@@ -28,6 +28,16 @@ export const updateTask = async (id: string, updates: Partial<Task>): Promise<Ta
     return snap.data() as Task;
 };
 
+export const partialUpdateTask = async (id: string, updates: Partial<Task>): Promise<Task | null> => {
+    const docRef = collection.doc(id);
+    await docRef.update(updates);
+    const snap = await docRef.get();
+
+    if (!snap.exists) return null;
+    
+    return snap.data() as Task;
+};
+
 export const deleteTask = async (id: string) => {
     await collection.doc(id).delete();
 };
