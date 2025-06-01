@@ -8,19 +8,13 @@ import apiRoutes from "./routes";
 
 const app = express();
 
-// 1. CORS y JSON SIEMPRE van primero
+
 app.use(cors(corsOptions));
 app.use(express.json());
 
-// 2. Rutas de la API
 app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
 app.use("/api", apiRoutes);
 
-app.post("/api/test", (req, res) => {
-    res.send("test funcionando");
-});
-
-// 3. Archivos estáticos (Angular o HTML puro)
 app.use(express.static(path.join(__dirname, "../public")));
 
 
