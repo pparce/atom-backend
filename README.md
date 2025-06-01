@@ -20,6 +20,7 @@ Backend desarrollado en Node.js con Express y TypeScript como parte del challeng
 ```bash
 git clone https://github.com/pparce/atom-backend.git
 cd atom-backend
+npm install
 ```
 
 ## Archivos necesarios
