@@ -4,9 +4,10 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 const allowedOrigins = [
+    "http://localhost:3000",
     "http://localhost:4200",
     "https://api-e7sshnd4va-uc.a.run.app",
-    "https://atom-pedropablo.web.app" // corregido: usás `https` no `http`
+    "https://atom-pedropablo.web.app"
 ];
 
 export const corsOptions: CorsOptions = {
@@ -19,5 +20,5 @@ export const corsOptions: CorsOptions = {
     },
     allowedHeaders: ['Content-Type', 'Authorization'],
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
-    credentials: true // si en algún momento usás cookies o auth headers
+    credentials: true 
 };

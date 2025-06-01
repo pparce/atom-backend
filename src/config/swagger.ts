@@ -10,9 +10,9 @@ export const swaggerSpec = swaggerJSDoc({
         },
         servers: [
             {
-                url: 'https://api-e7sshnd4va-uc.a.run.app/api', // Cambia esto por tu URL de producción
+                url: 'https://api-e7sshnd4va-uc.a.run.app/api',
             },
         ],
     },
-    apis: ['src/routes/*.ts'], // archivos donde están las rutas documentadas
+    apis: ['src/routes/*.ts'],
 });
