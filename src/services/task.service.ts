@@ -23,8 +23,6 @@ export const updateTask = async (id: string, updates: Partial<Task>): Promise<Ta
     const snap = await docRef.get();
 
     if (!snap.exists) return null;
-    console.log(snap.data());
-    
     return snap.data() as Task;
 };
 
