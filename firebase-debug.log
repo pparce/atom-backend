@@ -1,0 +1,253 @@
+[debug] [2025-06-01T23:04:41.321Z] ----------------------------------------------------------------------
+[debug] [2025-06-01T23:04:41.323Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js deploy --only functions
+[debug] [2025-06-01T23:04:41.323Z] CLI Version:   14.5.1
+[debug] [2025-06-01T23:04:41.323Z] Platform:      win32
+[debug] [2025-06-01T23:04:41.323Z] Node Version:  v20.17.0
+[debug] [2025-06-01T23:04:41.323Z] Time:          Mon Jun 02 2025 01:04:41 GMT+0200 (Ora legale dell’Europa centrale)
+[debug] [2025-06-01T23:04:41.323Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-06-01T23:04:41.455Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-01T23:04:41.455Z] > authorizing via signed-in user (pparce2337@gmail.com)
+[debug] [2025-06-01T23:04:41.455Z] [iam] checking project atom-pedropablo for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]
+[debug] [2025-06-01T23:04:41.456Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:41.456Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:41.457Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions [none]
+[debug] [2025-06-01T23:04:41.457Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:41.457Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-01T23:04:42.563Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions 200
+[debug] [2025-06-01T23:04:42.563Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get"]}
+[debug] [2025-06-01T23:04:42.563Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:42.563Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:42.563Z] >>> [apiv2][query] POST https://iam.googleapis.com/v1/projects/atom-pedropablo/serviceAccounts/atom-pedropablo@appspot.gserviceaccount.com:testIamPermissions [none]
+[debug] [2025-06-01T23:04:42.563Z] >>> [apiv2][body] POST https://iam.googleapis.com/v1/projects/atom-pedropablo/serviceAccounts/atom-pedropablo@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2025-06-01T23:04:43.519Z] <<< [apiv2][status] POST https://iam.googleapis.com/v1/projects/atom-pedropablo/serviceAccounts/atom-pedropablo@appspot.gserviceaccount.com:testIamPermissions 200
+[debug] [2025-06-01T23:04:43.519Z] <<< [apiv2][body] POST https://iam.googleapis.com/v1/projects/atom-pedropablo/serviceAccounts/atom-pedropablo@appspot.gserviceaccount.com:testIamPermissions {"permissions":["iam.serviceAccounts.actAs"]}
+[info] 
+[info] === Deploying to 'atom-pedropablo'...
+[info] 
+[info] i  deploying functions 
+[debug] [2025-06-01T23:04:43.522Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:43.522Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:43.522Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-01T23:04:43.522Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:44.597Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-06-01T23:04:44.597Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-01T23:04:44.597Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.597Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.597Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo [none]
+[debug] [2025-06-01T23:04:44.827Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo 200
+[debug] [2025-06-01T23:04:44.827Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo {"projectNumber":"439494853854","projectId":"atom-pedropablo","lifecycleState":"ACTIVE","name":"atom-pedropablo","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-31T18:18:51.479054Z"}
+[info] i  functions: preparing codebase default for deployment 
+[info] i  functions: ensuring required API cloudfunctions.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:44.828Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.828Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.828Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.829Z] Checked if tokens are valid: true, expires at: 1748820864969
+[info] i  functions: ensuring required API cloudbuild.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:44.829Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.829Z] Checked if tokens are valid: true, expires at: 1748820864969
+[info] i  artifactregistry: ensuring required API artifactregistry.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:44.829Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.829Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:44.829Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudfunctions.googleapis.com [none]
+[debug] [2025-06-01T23:04:44.829Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudfunctions.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:44.830Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/runtimeconfig.googleapis.com [none]
+[debug] [2025-06-01T23:04:44.830Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/runtimeconfig.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:44.831Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudbuild.googleapis.com [none]
+[debug] [2025-06-01T23:04:44.831Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudbuild.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:44.832Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/artifactregistry.googleapis.com [none]
+[debug] [2025-06-01T23:04:44.832Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/artifactregistry.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:45.758Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudfunctions.googleapis.com 200
+[debug] [2025-06-01T23:04:45.759Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudfunctions.googleapis.com [omitted]
+[info] +  functions: required API cloudfunctions.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:45.861Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudbuild.googleapis.com 200
+[debug] [2025-06-01T23:04:45.861Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudbuild.googleapis.com [omitted]
+[info] +  functions: required API cloudbuild.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:45.881Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/runtimeconfig.googleapis.com 200
+[debug] [2025-06-01T23:04:45.881Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/runtimeconfig.googleapis.com [omitted]
+[debug] [2025-06-01T23:04:45.887Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/artifactregistry.googleapis.com 200
+[debug] [2025-06-01T23:04:45.888Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/artifactregistry.googleapis.com [omitted]
+[info] +  artifactregistry: required API artifactregistry.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:45.888Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:45.888Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:45.888Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/atom-pedropablo/adminSdkConfig [none]
+[debug] [2025-06-01T23:04:46.283Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/atom-pedropablo/adminSdkConfig 200
+[debug] [2025-06-01T23:04:46.283Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/atom-pedropablo/adminSdkConfig {"projectId":"atom-pedropablo","storageBucket":"atom-pedropablo.firebasestorage.app"}
+[debug] [2025-06-01T23:04:46.284Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:46.284Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:46.284Z] >>> [apiv2][query] GET https://runtimeconfig.googleapis.com/v1beta1/projects/atom-pedropablo/configs [none]
+[debug] [2025-06-01T23:04:46.612Z] <<< [apiv2][status] GET https://runtimeconfig.googleapis.com/v1beta1/projects/atom-pedropablo/configs 200
+[debug] [2025-06-01T23:04:46.612Z] <<< [apiv2][body] GET https://runtimeconfig.googleapis.com/v1beta1/projects/atom-pedropablo/configs {}
+[debug] [2025-06-01T23:04:46.614Z] Validating nodejs source
+[debug] [2025-06-01T23:04:47.286Z] > [functions] package.json contents: {
+  "name": "atom-backend",
+  "scripts": {
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "shell": "npm run build && firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "22"
+  },
+  "main": "lib/index.js",
+  "dependencies": {
+    "bcryptjs": "^3.0.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "firebase-admin": "^12.6.0",
+    "firebase-functions": "^6.0.1",
+    "jsonwebtoken": "^9.0.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "ts-node-dev": "^2.0.0",
+    "zod": "^3.25.46"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/express": "^5.0.2",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/node": "^22.15.29",
+    "@types/swagger-ui-express": "^4.1.8",
+    "@typescript-eslint/eslint-plugin": "^5.12.0",
+    "@typescript-eslint/parser": "^5.12.0",
+    "cross-env": "^7.0.3",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^3.1.0",
+    "nodemon": "^3.1.10",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.7.3"
+  },
+  "private": true
+}
+[debug] [2025-06-01T23:04:47.287Z] Building nodejs source
+[info] i  functions: Loading and analyzing source code for codebase default to determine what to deploy 
+[debug] [2025-06-01T23:04:47.288Z] Could not find functions.yaml. Must use http discovery
+[debug] [2025-06-01T23:04:47.294Z] Found firebase-functions binary at 'C:\Users\Administrador\PETER\PROJETS\atom\atom-backend\node_modules\.bin\firebase-functions'
+[info] Serving at port 8107
+
+[info] 🚀 Servidor corriendo en http://localhost:3000
+
+[debug] [2025-06-01T23:04:47.891Z] Got response from /__/functions.yaml {"endpoints":{"api":{"availableMemoryMb":null,"timeoutSeconds":null,"minInstances":null,"maxInstances":null,"ingressSettings":null,"concurrency":null,"serviceAccountEmail":null,"vpc":null,"platform":"gcfv2","labels":{},"httpsTrigger":{},"entryPoint":"api"}},"specVersion":"v1alpha1","requiredAPIs":[],"extensions":{}}
+[info] i  extensions: ensuring required API firebaseextensions.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:52.929Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:52.929Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:52.929Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/firebaseextensions.googleapis.com [none]
+[debug] [2025-06-01T23:04:52.929Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/firebaseextensions.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:54.085Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/firebaseextensions.googleapis.com 200
+[debug] [2025-06-01T23:04:54.085Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/firebaseextensions.googleapis.com [omitted]
+[info] +  extensions: required API firebaseextensions.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:54.085Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-06-01T23:04:54.085Z] > authorizing via signed-in user (pparce2337@gmail.com)
+[debug] [2025-06-01T23:04:54.085Z] [iam] checking project atom-pedropablo for permissions ["firebase.projects.get","firebaseextensions.instances.list"]
+[debug] [2025-06-01T23:04:54.085Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:54.085Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:54.086Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions [none]
+[debug] [2025-06-01T23:04:54.086Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:04:54.086Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-01T23:04:55.038Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions 200
+[debug] [2025-06-01T23:04:55.039Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo:testIamPermissions {"permissions":["firebase.projects.get","firebaseextensions.instances.list"]}
+[debug] [2025-06-01T23:04:55.039Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:55.039Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:55.039Z] >>> [apiv2][query] GET https://firebaseextensions.googleapis.com/v1beta/projects/atom-pedropablo/instances pageSize=100&pageToken=
+[debug] [2025-06-01T23:04:56.100Z] <<< [apiv2][status] GET https://firebaseextensions.googleapis.com/v1beta/projects/atom-pedropablo/instances 200
+[debug] [2025-06-01T23:04:56.101Z] <<< [apiv2][body] GET https://firebaseextensions.googleapis.com/v1beta/projects/atom-pedropablo/instances {}
+[info] i  functions: Loaded environment variables from .env. 
+[info] i  functions: preparing . directory for uploading... 
+[info] i  functions: packaged C:\Users\Administrador\PETER\PROJETS\atom\atom-backend (120.01 KB) for uploading 
+[debug] [2025-06-01T23:04:56.208Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:56.208Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:56.208Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v1/projects/atom-pedropablo/locations/-/functions [none]
+[debug] [2025-06-01T23:04:56.969Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v1/projects/atom-pedropablo/locations/-/functions 200
+[debug] [2025-06-01T23:04:56.969Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v1/projects/atom-pedropablo/locations/-/functions {}
+[debug] [2025-06-01T23:04:56.970Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:56.970Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:56.970Z] >>> [apiv2][query] GET https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/-/functions filter=environment%3D%22GEN_2%22
+[debug] [2025-06-01T23:04:58.028Z] <<< [apiv2][status] GET https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/-/functions 200
+[debug] [2025-06-01T23:04:58.028Z] <<< [apiv2][body] GET https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/-/functions {"functions":[{"name":"projects/atom-pedropablo/locations/us-central1/functions/api","buildConfig":{"build":"projects/439494853854/locations/us-central1/builds/1187c61f-d0cc-46e6-8d2f-ea7193d5f99b","runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-sources-439494853854-us-central1","object":"api/function-source.zip","generation":"1748815320698420"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""},"dockerRepository":"projects/atom-pedropablo/locations/us-central1/repositories/gcf-artifacts","sourceProvenance":{"resolvedStorageSource":{"bucket":"gcf-v2-sources-439494853854-us-central1","object":"api/function-source.zip","generation":"1748815320698420"}},"dockerRegistry":"ARTIFACT_REGISTRY","serviceAccount":"projects/atom-pedropablo/serviceAccounts/439494853854-compute@developer.gserviceaccount.com","automaticUpdatePolicy":{}},"serviceConfig":{"service":"projects/atom-pedropablo/locations/us-central1/services/api","timeoutSeconds":60,"environmentVariables":{"JWT_SECRET":"&fr!ma@0lx^_8)sd+mhh&$3ilo3bfkwh!m@88e+)x^lhigjm98","FIREBASE_CONFIG":"{\"projectId\":\"atom-pedropablo\",\"storageBucket\":\"atom-pedropablo.firebasestorage.app\"}","GCLOUD_PROJECT":"atom-pedropablo","EVENTARC_CLOUD_EVENT_SOURCE":"projects/atom-pedropablo/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"maxInstanceCount":40,"ingressSettings":"ALLOW_ALL","uri":"https://api-e7sshnd4va-uc.a.run.app","serviceAccountEmail":"439494853854-compute@developer.gserviceaccount.com","availableMemory":"256Mi","allTrafficOnLatestRevision":true,"revision":"api-00022-yeq","maxInstanceRequestConcurrency":80,"availableCpu":"1"},"state":"ACTIVE","updateTime":"2025-06-01T22:03:03.677756318Z","labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"71132f5202107058a5af16106b9bc48cd9c9ccec"},"environment":"GEN_2","url":"https://us-central1-atom-pedropablo.cloudfunctions.net/api","createTime":"2025-05-31T21:50:29.049922497Z","satisfiesPzi":true}]}
+[info] i  functions: ensuring required API run.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:58.030Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:58.030Z] Checked if tokens are valid: true, expires at: 1748820864969
+[info] i  functions: ensuring required API eventarc.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:58.031Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:58.031Z] Checked if tokens are valid: true, expires at: 1748820864969
+[info] i  functions: ensuring required API pubsub.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:58.031Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:58.031Z] Checked if tokens are valid: true, expires at: 1748820864969
+[info] i  functions: ensuring required API storage.googleapis.com is enabled... 
+[debug] [2025-06-01T23:04:58.031Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:58.031Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:58.031Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/run.googleapis.com [none]
+[debug] [2025-06-01T23:04:58.031Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/run.googleapis.com x-goog-quota-user=projects/439494853854
+[debug] [2025-06-01T23:04:58.032Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/eventarc.googleapis.com [none]
+[debug] [2025-06-01T23:04:58.032Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/eventarc.googleapis.com x-goog-quota-user=projects/439494853854
+[debug] [2025-06-01T23:04:58.034Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/pubsub.googleapis.com [none]
+[debug] [2025-06-01T23:04:58.034Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/pubsub.googleapis.com x-goog-quota-user=projects/439494853854
+[debug] [2025-06-01T23:04:58.035Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/storage.googleapis.com [none]
+[debug] [2025-06-01T23:04:58.035Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/storage.googleapis.com x-goog-quota-user=projects/439494853854
+[debug] [2025-06-01T23:04:59.212Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/storage.googleapis.com 200
+[debug] [2025-06-01T23:04:59.212Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/storage.googleapis.com [omitted]
+[info] +  functions: required API storage.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:59.213Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/pubsub.googleapis.com 200
+[debug] [2025-06-01T23:04:59.213Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/pubsub.googleapis.com [omitted]
+[info] +  functions: required API pubsub.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:59.228Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/eventarc.googleapis.com 200
+[debug] [2025-06-01T23:04:59.228Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/eventarc.googleapis.com [omitted]
+[info] +  functions: required API eventarc.googleapis.com is enabled 
+[debug] [2025-06-01T23:04:59.234Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/run.googleapis.com 200
+[debug] [2025-06-01T23:04:59.234Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/439494853854/services/run.googleapis.com [omitted]
+[info] +  functions: required API run.googleapis.com is enabled 
+[info] i  functions: generating the service identity for pubsub.googleapis.com... 
+[debug] [2025-06-01T23:04:59.235Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:59.235Z] Checked if tokens are valid: true, expires at: 1748820864969
+[info] i  functions: generating the service identity for eventarc.googleapis.com... 
+[debug] [2025-06-01T23:04:59.235Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:59.235Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:04:59.235Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/439494853854/services/pubsub.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-01T23:04:59.236Z] >>> [apiv2][query] POST https://serviceusage.googleapis.com/v1beta1/projects/439494853854/services/eventarc.googleapis.com:generateServiceIdentity [none]
+[debug] [2025-06-01T23:04:59.619Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/439494853854/services/pubsub.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-01T23:04:59.619Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/439494853854/services/pubsub.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-439494853854@gcp-sa-pubsub.iam.gserviceaccount.com","uniqueId":"107936314336556158054"}}
+[debug] [2025-06-01T23:05:00.182Z] <<< [apiv2][status] POST https://serviceusage.googleapis.com/v1beta1/projects/439494853854/services/eventarc.googleapis.com:generateServiceIdentity 200
+[debug] [2025-06-01T23:05:00.182Z] <<< [apiv2][body] POST https://serviceusage.googleapis.com/v1beta1/projects/439494853854/services/eventarc.googleapis.com:generateServiceIdentity {"name":"operations/finished.DONE_OPERATION","done":true,"response":{"@type":"type.googleapis.com/google.api.serviceusage.v1beta1.ServiceIdentity","email":"service-439494853854@gcp-sa-eventarc.iam.gserviceaccount.com","uniqueId":"101843089457832754380"}}
+[debug] [2025-06-01T23:05:00.183Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:00.183Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:00.183Z] >>> [apiv2][query] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com [none]
+[debug] [2025-06-01T23:05:00.183Z] >>> [apiv2][(partial)header] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com x-goog-quota-user=projects/atom-pedropablo
+[debug] [2025-06-01T23:05:01.094Z] <<< [apiv2][status] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com 200
+[debug] [2025-06-01T23:05:01.094Z] <<< [apiv2][body] GET https://serviceusage.googleapis.com/v1/projects/atom-pedropablo/services/cloudresourcemanager.googleapis.com [omitted]
+[debug] [2025-06-01T23:05:01.095Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:01.095Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:01.095Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo [none]
+[debug] [2025-06-01T23:05:01.977Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo 200
+[debug] [2025-06-01T23:05:01.978Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/projects/atom-pedropablo {"projectNumber":"439494853854","projectId":"atom-pedropablo","lifecycleState":"ACTIVE","name":"atom-pedropablo","labels":{"firebase":"enabled","firebase-core":"disabled"},"createTime":"2025-05-31T18:18:51.479054Z"}
+[debug] [2025-06-01T23:05:01.978Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:01.978Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:01.978Z] >>> [apiv2][query] GET https://compute.googleapis.com/compute/v1/projects/439494853854 [none]
+[debug] [2025-06-01T23:05:02.306Z] <<< [apiv2][status] GET https://compute.googleapis.com/compute/v1/projects/439494853854 403
+[debug] [2025-06-01T23:05:02.306Z] <<< [apiv2][body] GET https://compute.googleapis.com/compute/v1/projects/439494853854 {"error":{"code":403,"message":"Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/439494853854","containerInfo":"439494853854","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854","service":"compute.googleapis.com","serviceTitle":"Compute Engine API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854"}]}]}}
+[debug] [2025-06-01T23:05:02.307Z] unable to look up default compute service account. Falling back to 439494853854-compute@developer.gserviceaccount.com. Error: {"name":"FirebaseError","children":[],"context":{"body":{"error":{"code":403,"message":"Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","errors":[{"message":"Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","domain":"usageLimits","reason":"accessNotConfigured","extendedHelp":"https://console.developers.google.com"}],"status":"PERMISSION_DENIED","details":[{"@type":"type.googleapis.com/google.rpc.ErrorInfo","reason":"SERVICE_DISABLED","domain":"googleapis.com","metadata":{"consumer":"projects/439494853854","containerInfo":"439494853854","activationUrl":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854","service":"compute.googleapis.com","serviceTitle":"Compute Engine API"}},{"@type":"type.googleapis.com/google.rpc.LocalizedMessage","locale":"en-US","message":"Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry."},{"@type":"type.googleapis.com/google.rpc.Help","links":[{"description":"Google developers console API activation","url":"https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854"}]}]}},"response":{"statusCode":403}},"exit":1,"message":"Request to https://compute.googleapis.com/compute/v1/projects/439494853854 had HTTP Error: 403, Compute Engine API has not been used in project 439494853854 before or it is disabled. Enable it by visiting https://console.developers.google.com/apis/api/compute.googleapis.com/overview?project=439494853854 then retry. If you enabled this API recently, wait a few minutes for the action to propagate to our systems and retry.","status":403}
+[debug] [2025-06-01T23:05:02.307Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:02.307Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:02.307Z] >>> [apiv2][query] GET https://cloudbilling.googleapis.com/v1/projects/atom-pedropablo/billingInfo [none]
+[debug] [2025-06-01T23:05:03.164Z] <<< [apiv2][status] GET https://cloudbilling.googleapis.com/v1/projects/atom-pedropablo/billingInfo 200
+[debug] [2025-06-01T23:05:03.164Z] <<< [apiv2][body] GET https://cloudbilling.googleapis.com/v1/projects/atom-pedropablo/billingInfo {"name":"projects/atom-pedropablo/billingInfo","projectId":"atom-pedropablo","billingAccountName":"billingAccounts/016504-4F5A6B-2A6DB0","billingEnabled":true}
+[debug] [2025-06-01T23:05:03.165Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:03.165Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:03.165Z] >>> [apiv2][query] POST https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/us-central1/functions:generateUploadUrl [none]
+[debug] [2025-06-01T23:05:04.099Z] <<< [apiv2][status] POST https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/us-central1/functions:generateUploadUrl 200
+[debug] [2025-06-01T23:05:04.099Z] <<< [apiv2][body] POST https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/us-central1/functions:generateUploadUrl {"uploadUrl":"https://storage.googleapis.com/gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com/4178f468-96a2-49dc-bf5a-3da1afbfa090.zip?GoogleAccessId=service-439494853854@gcf-admin-robot.iam.gserviceaccount.com&Expires=1748820904&Signature=lSgEdUFykwVf1vbXPwa9hhAsstKlgnQcADwS4ndUcC4cm5HmeUnhxCSNlRddES04QO7glEhfPqOD9UYLzznH54eI0YtCidscvwvWayjk%2B823cxGud558baRCV60aVJLide0veBDY5K8iL%2BNHzk1F6XhFco2I6ZFu5DuyXjlMvMe7ZLbAX0Nt9mzD9cAfZUQimBplSgZT4zs7rTNX5177BH0eXbxgN5ePzPp6KZCzTySo%2FYioKwVgS2tCgorbJuSuclWZ1V78ifE8sK%2BzyQUyNC4SxsFemxVUkU6Hd8rh5wLxkeTODCc%2Fzc5te5NItdnMSAeH2JWrqfXsdBvZbIsmbg%3D%3D","storageSource":{"bucket":"gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com","object":"4178f468-96a2-49dc-bf5a-3da1afbfa090.zip"}}
+[debug] [2025-06-01T23:05:04.100Z] >>> [apiv2][query] PUT https://storage.googleapis.com/gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com/4178f468-96a2-49dc-bf5a-3da1afbfa090.zip GoogleAccessId=service-439494853854%40gcf-admin-robot.iam.gserviceaccount.com&Expires=1748820904&Signature=lSgEdUFykwVf1vbXPwa9hhAsstKlgnQcADwS4ndUcC4cm5HmeUnhxCSNlRddES04QO7glEhfPqOD9UYLzznH54eI0YtCidscvwvWayjk%2B823cxGud558baRCV60aVJLide0veBDY5K8iL%2BNHzk1F6XhFco2I6ZFu5DuyXjlMvMe7ZLbAX0Nt9mzD9cAfZUQimBplSgZT4zs7rTNX5177BH0eXbxgN5ePzPp6KZCzTySo%2FYioKwVgS2tCgorbJuSuclWZ1V78ifE8sK%2BzyQUyNC4SxsFemxVUkU6Hd8rh5wLxkeTODCc%2Fzc5te5NItdnMSAeH2JWrqfXsdBvZbIsmbg%3D%3D
+[debug] [2025-06-01T23:05:04.100Z] >>> [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com/4178f468-96a2-49dc-bf5a-3da1afbfa090.zip [stream]
+[debug] [2025-06-01T23:05:04.895Z] <<< [apiv2][status] PUT https://storage.googleapis.com/gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com/4178f468-96a2-49dc-bf5a-3da1afbfa090.zip 200
+[debug] [2025-06-01T23:05:04.895Z] <<< [apiv2][body] PUT https://storage.googleapis.com/gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com/4178f468-96a2-49dc-bf5a-3da1afbfa090.zip [omitted]
+[info] +  functions: . folder uploaded successfully 
+[info] i  functions: updating Node.js 22 (2nd Gen) function api(us-central1)... 
+[debug] [2025-06-01T23:05:04.898Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:04.899Z] Checked if tokens are valid: true, expires at: 1748820864969
+[debug] [2025-06-01T23:05:04.899Z] >>> [apiv2][query] PATCH https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/us-central1/functions/api updateMask=name%2CbuildConfig.runtime%2CbuildConfig.entryPoint%2CbuildConfig.source.storageSource.bucket%2CbuildConfig.source.storageSource.object%2CbuildConfig.environmentVariables%2CbuildConfig.sourceToken%2CserviceConfig.environmentVariables%2CserviceConfig.ingressSettings%2CserviceConfig.timeoutSeconds%2CserviceConfig.serviceAccountEmail%2CserviceConfig.availableMemory%2CserviceConfig.minInstanceCount%2CserviceConfig.maxInstanceCount%2CserviceConfig.maxInstanceRequestConcurrency%2CserviceConfig.availableCpu%2CserviceConfig.vpcConnector%2CserviceConfig.vpcConnectorEgressSettings%2Clabels
+[debug] [2025-06-01T23:05:04.899Z] >>> [apiv2][body] PATCH https://cloudfunctions.googleapis.com/v2/projects/atom-pedropablo/locations/us-central1/functions/api {"name":"projects/atom-pedropablo/locations/us-central1/functions/api","buildConfig":{"runtime":"nodejs22","entryPoint":"api","source":{"storageSource":{"bucket":"gcf-v2-uploads-439494853854.us-central1.cloudfunctions.appspot.com","object":"4178f468-96a2-49dc-bf5a-3da1afbfa090.zip"}},"environmentVariables":{"GOOGLE_NODE_RUN_SCRIPTS":""}},"serviceConfig":{"environmentVariables":{"JWT_SECRET":"&fr!ma@0lx^_8)sd+mhh&$3ilo3bfkwh!m@88e+)x^lhigjm98","FIREBASE_CONFIG":"{\"projectId\":\"atom-pedropablo\",\"storageBucket\":\"atom-pedropablo.firebasestorage.app\"}","GCLOUD_PROJECT":"atom-pedropablo","EVENTARC_CLOUD_EVENT_SOURCE":"projects/atom-pedropablo/locations/us-central1/services/api","FUNCTION_TARGET":"api","LOG_EXECUTION_ID":"true"},"ingressSettings":null,"timeoutSeconds":null,"serviceAccountEmail":null,"availableMemory":"256Mi","minInstanceCount":null,"maxInstanceCount":null,"maxInstanceRequestConcurrency":80,"availableCpu":"1","vpcConnector":null,"vpcConnectorEgressSettings":null},"labels":{"deployment-tool":"cli-firebase","firebase-functions-hash":"009f7a79d46638e9e46d9f09714a24b993fa4432"}}

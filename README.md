@@ -38,6 +38,7 @@ Contiene las keys de firebase
 ## ⚙️ Scripts disponibles
 
 ```bash
-npm run dev   
+npm run dev
+npm run build
 npm run deploy
 ```
