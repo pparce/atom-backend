@@ -1,21 +1,36 @@
-import cors from 'cors';
-import express from 'express';
-import swaggerUi from 'swagger-ui-express';
-import { corsOptions } from './config/cors';
-import { swaggerSpec } from './config/swagger';
-import apiRoutes from './routes';
+import cors from "cors";
+import express from "express";
+import path from "path";
+import swaggerUi from "swagger-ui-express";
+import { corsOptions } from "./config/cors";
+import { swaggerSpec } from "./config/swagger";
+import apiRoutes from "./routes";
 
 const app = express();
 
+// 1. CORS y JSON SIEMPRE van primero
 app.use(cors(corsOptions));
 app.use(express.json());
-app.use('/api/docs', swaggerUi.serve, swaggerUi.setup(swaggerSpec));
-app.use('/api', apiRoutes);
 
-const PORT = process.env.PORT || 3000;
+// 2. Rutas de la API
+app.use("/api/docs", swaggerUi.serve, swaggerUi.setup(swaggerSpec));
+app.use("/api", apiRoutes);
 
-app.listen(PORT, () => {
-    console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+app.post("/api/test", (req, res) => {
+    res.send("test funcionando");
 });
+
+// 3. Archivos estáticos (Angular o HTML puro)
+app.use(express.static(path.join(__dirname, "../public")));
+
+
+
+if (process.env.NODE_ENV !== "production") {
+    const PORT = 3000;
+    app.listen(PORT, () => {
+        console.log(`🚀 Servidor corriendo en http://localhost:${PORT}`);
+    });
+}
+
 
 export default app;

@@ -10,7 +10,7 @@ export const swaggerSpec = swaggerJSDoc({
         },
         servers: [
             {
-                url: 'http://localhost:3000/api',
+                url: 'https://api-e7sshnd4va-uc.a.run.app/api', // Cambia esto por tu URL de producción
             },
         ],
     },
