@@ -1,5 +1,8 @@
 import { Request, Response } from 'express';
+import jwt from 'jsonwebtoken';
 import * as UserService from '../services/user.service';
+
+const JWT_SECRET = process.env.JWT_SECRET || 'secret';
 
 export const login = async (req: Request, res: Response) => {
     const { email } = req.body;
@@ -15,7 +18,9 @@ export const login = async (req: Request, res: Response) => {
         res.status(401).json({ error: 'Usuario no encontrado' });
     }
 
-    res.status(200).json({ message: 'Login exitoso', user });
+    const token = jwt.sign({ id: user?.id, email: user?.email }, JWT_SECRET, { expiresIn: '1h' });
+
+    res.status(200).json({ message: 'Login exitoso', user, token });
 };
 
 export const register = async (req: Request, res: Response) => {
@@ -27,5 +32,7 @@ export const register = async (req: Request, res: Response) => {
     }
 
     const user = await UserService.createUser(email);
-    res.status(201).json({ message: 'Usuario creado', user });
+    const token = jwt.sign({ id: user?.id, email: user?.email }, JWT_SECRET, { expiresIn: '1h' });
+
+    res.status(201).json({ message: 'Usuario creado', user, token });
 };
