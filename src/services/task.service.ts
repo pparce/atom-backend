@@ -4,12 +4,12 @@ import { Task } from '../models/task.model';
 const collection = db.collection('tasks');
 
 export const getTasks = async (userId: string): Promise<Task[]> => {
-  const snapshot = await collection
-    .where('userId', '==', userId)
-    .orderBy('createdAt', 'desc') // Ordena por fecha de creación, más reciente primero
-    .get();
+    const snapshot = await collection
+        .where('userId', '==', userId)
+        .orderBy('createdAt', 'desc') // Ordena por fecha de creación, más reciente primero
+        .get();
 
-  return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Task));
+    return snapshot.docs.map(doc => ({ id: doc.id, ...doc.data() } as Task));
 };
 
 export const createTask = async (task: Task) => {
@@ -21,19 +21,16 @@ export const updateTask = async (id: string, updates: Partial<Task>): Promise<Ta
     const docRef = collection.doc(id);
     await docRef.update(updates);
     const snap = await docRef.get();
-
     if (!snap.exists) return null;
-    return snap.data() as Task;
+    return { id: docRef.id, ...snap.data() } as Task;
 };
 
 export const partialUpdateTask = async (id: string, updates: Partial<Task>): Promise<Task | null> => {
     const docRef = collection.doc(id);
     await docRef.update(updates);
     const snap = await docRef.get();
-
     if (!snap.exists) return null;
-    
-    return snap.data() as Task;
+    return { id: docRef.id, ...snap.data() } as Task;
 };
 
 export const deleteTask = async (id: string) => {
